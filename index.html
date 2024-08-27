@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Espaçamento entre os botões */
+            margin-bottom: 20px; /* Espaço abaixo dos botões */
+        }
+
+        button {
+            width: 200px;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+            width: 60%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo adicional para o formulário de contato */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+        }
+
+        textarea {
+            resize: vertical; /* Permite redimensionamento apenas na vertical */
+        }
+
+        form button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Melhorias gerais */
+        h2, h3 {
+            color: #333;
+        }
+
+        p, li {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showContent('sobre-mim')">SOBRE MIM</button>
+        <button onclick="showContent('academico')">ACADÊMICO</button>
+        <button onclick="showContent('portfolio')">PORTFÓLIO</button>
+        <button onclick="showContent('contato')">CONTATO</button>
+    </div>
+
+    <div id="sobre-mim" class="content">
+        <h2>Sobre Mim</h2>
+        <p>Experiência de mais de 20 anos em gestão de projetos. Atualmente gestor de olimpíadas científicas e do conhecimento do Instituto Alpha Lumen, ONG de impacto social de São José dos Campos. Foi gerente de projetos da Federação Paulista de Futebol de Salão por 12 anos, responsável pela campanha 'Futsal! Um Sonho Olímpico' em 127 países, no período de 2001 até 2012. Foi coordenador do projeto de inclusão do Futsal no Programa dos Jogos Pan-americanos, Rio 2007.</p>
+
+        <p>Jornalista com registro MTB 71812 SP, foi colunista esportivo no Diário de S.Paulo (2010-2011). Membro Fundador da AIFS Asociación Internacional de Futbol de Salón, com sede em Montevideo, no Uruguai (2010). Membro do Comitê de Desarollo y Promoción da AMF - Asociación Mundial de Futsal, com sede em Asunción, Paraguai (2016-2018). Ex-Presidente da CFSB - Confederação de Futebol de Salão do Brasil (gestão 2014-2018) - Em sua gestão conquistou 14 premiações. É Presidente de Honra da CFSB.</p>
+        <br>
+        <b>Hobbies</b><br>
+        >> Assistir Futebol (Jogos do Flamengo)<br>
+        >> Tocar violão<br>
+        >> Leitura (livros e artigos)
+    </div>
+
+    <!-- Placeholder divs for other sections -->
+    <div id="academico" class="content">
+        <h2>Acadêmico</h2>
+        <h3>Formação Acadêmica</h3>
+        <ul>
+            <li>2024 - 2ª Graduação em Análise e Desenvolvimento de Sistemas na UNINTER</li>
+            <li>2019 - Pós-graduação em Metodologia do Ensino em Geografia</li>
+            <li>2018 - MBA em Gestão de Projetos na USP/ESALQ</li>
+            <li>2013 - Bacharel em Administração de Empresas</li>
+        </ul>
+        <p>Endereço para acessar este CV: <a href="http://lattes.cnpq.br/1197463782449740" target="_blank">http://lattes.cnpq.br/1197463782449740</a></p>
+
+        <b>Idiomas</b>
+        <br><b>Inglês:</b> Compreende Bem, Fala Razoavelmente, Lê Razoavelmente, Escreve Razoavelmente.
+        <br><b>Espanhol:</b> Compreende Bem, Fala Bem, Lê Bem, Escreve Bem.
+        <br><b>Chinês:</b> Compreende Pouco, Fala Pouco, Lê Pouco, Escreve Pouco.
+    </div>
+
+    <div id="portfolio" class="content">
+        <h2>Portfólio</h2>
+        <p>Projetos Web desenvolvidos 2001 até 2024.</p>
+        <p>INSTITUTO ALPHA LUMEN - <a href="http://www.alphalumen.org.br" target="_blank">www.alphalumen.org.br</a></p>
+        <p>ALPHA EDTECH CODE ACADEMY - <a href="http://www.alphaedtech.org.br" target="_blank">www.alphaedtech.org</a></p>
+        <p>FUTSAL PAULISTA - <a href="http://www.futsal.com.br" target="_blank">www.futsal.com.br</a></p>
+        <p>FUNDAÇÃO EDGAR MORIN - FRANÇA - <a href="https://www.fondationdefrance.org/fr/annuaire-des-fondations/fondation-edgar-morin" target="_blank">www.Fondation Edgar Morin</a></p>
+    </div>
+
+    <div id="contato" class="content">
+        <h2>Contato: Envie sua mensagem</h2>
+        <form action="seu-script.php" method="post">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            // Esconde todos os conteúdos
+            var contents = document.getElementsByClassName('content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+
+            // Exibe o conteúdo selecionado
+            var content = document.getElementById(sectionId);
+            if (content) {
+                content.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
