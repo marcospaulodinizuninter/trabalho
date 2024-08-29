@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,13 @@
             height: 100vh;
             margin: 0;
             flex-direction: column;
+        }
+
+        /* Novo estilo para o cabeçalho */
+        h1 {
+            color: green;
+            font-size: 48px; /* Define o tamanho grande */
+            margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
         }
 
         .container {
@@ -127,12 +134,17 @@
     </style>
 </head>
 <body>
+    <!-- Novo cabeçalho adicionado aqui -->
+    <h1>&#9728; PORTIFÓLIO PESSOAL &#9728;</h1>
     <div class="container">
         <button onclick="showContent('sobre-mim')">SOBRE MIM</button>
         <button onclick="showContent('academico')">ACADÊMICO</button>
         <button onclick="showContent('portfolio')">PORTFÓLIO</button>
         <button onclick="showContent('contato')">CONTATO</button>
     </div>
+
+<h3>by Diniz1974</h3>
+
 
     <div id="sobre-mim" class="content">
         <h2>Sobre Mim</h2>
@@ -199,16 +211,16 @@
 
     <script>
         function showContent(sectionId) {
-            // Esconde todos os conteúdos
-            var contents = document.getElementsByClassName('content');
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].style.display = 'none';
-            }
+            // Esconde todos os elementos de conteúdo
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
 
-            // Exibe o conteúdo selecionado
-            var content = document.getElementById(sectionId);
-            if (content) {
-                content.style.display = 'block';
+            // Mostra o elemento de conteúdo específico
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'block';
             }
         }
     </script>
